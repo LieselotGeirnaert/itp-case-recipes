@@ -122,6 +122,7 @@
 
 @media only screen and (max-width: 600px) {
   .recipe {
+    font-size: var(--fontSmall);
     grid-template-columns: 1fr;
     margin: 2rem auto;
     padding: 2rem;
@@ -143,5 +144,9 @@
 
   .description {
     grid-row: 6 / span 1;
+  }
+
+  .description p {
+    line-height: 1rem;
   }
 }
