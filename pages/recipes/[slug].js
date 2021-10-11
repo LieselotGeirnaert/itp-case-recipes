@@ -15,6 +15,7 @@ const RecipeDetail = ({ recipe }) => {
   const { title, cookingTime, description, ingredients, supplies } =
     recipe.fields;
 
+  console.log(supplies);
   return (
     <Layout>
       <div>
@@ -38,16 +39,21 @@ const RecipeDetail = ({ recipe }) => {
             </ul>
           </section>
 
-          <section className={styles.supplies}>
-            <h3 className={styles.subtitle}>Benodigdheden</h3>
-            <ul className={styles.list}>
-              {supplies.map((supply, index) => (
-                <li key={index} className={styles.listItem}>
-                  {supply}
-                </li>
-              ))}
-            </ul>
-          </section>
+          {supplies ? (
+            <section className={styles.supplies}>
+              <h3 className={styles.subtitle}>Benodigdheden</h3>
+              <ul className={styles.list}>
+                {supplies.map((supply, index) => (
+                  <li key={index} className={styles.listItem}>
+                    {supply}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : (
+            ""
+          )}
+
           <section className={styles.description}>
             <h3 className={styles.subtitle}>Bereiding</h3>
             {documentToReactComponents(description)}
