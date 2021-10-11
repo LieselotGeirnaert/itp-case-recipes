@@ -1,0 +1,20 @@
+:root {
+  --colorLightest: white;
+  --colorText: #211f1f;
+  --colorMain: #d69762;
+  --colorSecondary: #5ad485;
+  --colorLight: rgba(71, 55, 255, .08);
+  --colorGrayDark: #9c9c9c;
+  --spacerSmall: .75rem; /* 12px */
+  --spacerRegular: 1rem; /* 16px */
+  --spacerBig: 1.88rem; /* 30px */
+  --fontSmall: .85rem; /* 12px */
+  --fontRegular: 1.25rem; /* 18px */
+  --fontMedium: 1.75rem; /* 28px */
+  --fontBig: 2.5rem;
+  --font: 'Lato', sans-serif;
+  --fontAlt: 'Playfair Display', serif;
+  --fontWeightRegular: 400;
+  --fontWeightBold: 500;
+  --fontWeightAlt: 700;
+}

@@ -1,0 +1,21 @@
+.header {
+  padding: 2rem 3rem;
+}
+
+.title {
+  color: var(--colorMain);
+  font-family: var(--fontAlt);
+  font-size: var(--fontRegular);
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 70rem;
+}
+
+.footer {
+  padding: 2rem;
+  text-align: center;
+  font-size: var(--fontSmall);
+
+}

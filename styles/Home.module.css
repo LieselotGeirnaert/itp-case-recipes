@@ -1,4 +1,14 @@
-.container {
+.title {
+ color: var(--colorMain);
+  font-family: var(--fontAlt);
+  font-size: var(--fontMedium);
+}
+
+.recipes {
+  display: flex;
+  flex-direction: column;
+}
+/* .container {
   min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
@@ -118,4 +128,4 @@
     width: 100%;
     flex-direction: column;
   }
-}
+} */

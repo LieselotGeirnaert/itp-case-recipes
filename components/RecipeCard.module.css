@@ -1,0 +1,58 @@
+.recipe {
+  background: var(--colorLightest);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  margin: 2rem 0;
+  max-width: 40rem;
+}
+
+.title {
+  font-family: var(--fontAlt);
+  font-size: var(--fontMedium);
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 1;
+  margin: 0 2rem 3rem;
+}
+
+.cooking {
+  color: var(--colorGrayDark);
+  font-size: var(--fontSmall);
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 1;
+  margin: 3rem 0 1rem;
+  padding-left: 3.2rem;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.cooking::before {
+  background-image: url(/images/clock.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 2rem;
+  position: absolute;
+  width: 2rem;
+}
+
+.link {
+  background: var(--colorSecondary);
+  border-radius: 2rem;
+  color: var(--colorLightest);
+  font-size: var(--fontSmall);
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 1;
+  margin: 0 2rem 2rem;
+  padding: 1rem 1.5rem;
+  width: fit-content;
+}
+
+.link:hover {
+  background: var(--colorMain);
+}
