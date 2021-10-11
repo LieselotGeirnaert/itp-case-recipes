@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { createClient } from "contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 //styling
@@ -23,36 +22,40 @@ const RecipeDetail = ({ recipe }) => {
           <a className={styles.back}>Terug naar overzicht</a>
         </Link>
       </div>
-      <section className={styles.recipe}>
-        <h2 className={styles.title}>{title}</h2>
-        <p className={styles.cooking}>{cookingTime} minuten</p>
+      {recipe ? (
+        <section className={styles.recipe}>
+          <h2 className={styles.title}>{title}</h2>
+          <p className={styles.cooking}>{cookingTime} minuten</p>
 
-        <section className={styles.ingredients}>
-          <h3 className={styles.subtitle}>Ingrediënten</h3>
-          <ul className={styles.list}>
-            {ingredients.map((ingredient, index) => (
-              <li key={index} className={styles.listItem}>
-                {ingredient}
-              </li>
-            ))}
-          </ul>
-        </section>
+          <section className={styles.ingredients}>
+            <h3 className={styles.subtitle}>Ingrediënten</h3>
+            <ul className={styles.list}>
+              {ingredients.map((ingredient, index) => (
+                <li key={index} className={styles.listItem}>
+                  {ingredient}
+                </li>
+              ))}
+            </ul>
+          </section>
 
-        <section className={styles.supplies}>
-          <h3 className={styles.subtitle}>Benodigdheden</h3>
-          <ul className={styles.list}>
-            {supplies.map((supply, index) => (
-              <li key={index} className={styles.listItem}>
-                {supply}
-              </li>
-            ))}
-          </ul>
+          <section className={styles.supplies}>
+            <h3 className={styles.subtitle}>Benodigdheden</h3>
+            <ul className={styles.list}>
+              {supplies.map((supply, index) => (
+                <li key={index} className={styles.listItem}>
+                  {supply}
+                </li>
+              ))}
+            </ul>
+          </section>
+          <section className={styles.description}>
+            <h3 className={styles.subtitle}>Bereiding</h3>
+            {documentToReactComponents(description)}
+          </section>
         </section>
-        <section className={styles.description}>
-          <h3 className={styles.subtitle}>Bereiding</h3>
-          {documentToReactComponents(description)}
-        </section>
-      </section>
+      ) : (
+        <p>Recept niet gevonden</p>
+      )}
     </Layout>
   );
 };
