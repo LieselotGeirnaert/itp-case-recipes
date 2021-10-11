@@ -1,5 +1,3 @@
-import Head from "next/head";
-import Image from "next/image";
 import { createClient } from "contentful";
 // styling
 import styles from "../styles/Home.module.css";
@@ -8,7 +6,6 @@ import Layout from "../components/Layout";
 import RecipeCard from "../components/RecipeCard";
 
 export default function Home({ recipes }) {
-  console.log(recipes);
 
   return (
     <Layout>

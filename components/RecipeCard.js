@@ -18,8 +18,6 @@ const RecipeCard = ({ recipe }) => {
           alt={title}
           width={320}
           height={320}
-          // layout="fill"
-          // objectFit="contain"
         />
       </div>
     </section>
