@@ -3,24 +3,25 @@ import Link from "next/link";
 import Image from "next/image";
 
 const RecipeCard = ({ recipe }) => {
+  const { title, cookingTime, slug, thumbnail } = recipe.fields;
+
   return (
     <section className={styles.recipe}>
-      <h3 className={styles.title}>{recipe.fields.title}</h3>
-      <p className={styles.description}>{/* {recipe.fields.description} */}</p>
-      <p className={styles.cooking}>{recipe.fields.cookingTime} minuten</p>
-      <Link href={`/recipe/${recipe.id}`}>
+      <h3 className={styles.title}>{title}</h3>
+      <p className={styles.cooking}>{cookingTime} minuten</p>
+      <Link href={`/recipes/${slug}`}>
         <a className={styles.link}>Recept bekijken</a>
       </Link>
-      {/* <ul>
-        {recipe.fields.ingredients.map((ingredient, index) => (
-          <li key={index}>{ingredient}</li>
-        ))}
-      </ul>
-      <ul>
-        {recipe.fields.supplies.map((supply, index) => (
-          <li key={index}>{supply}</li>
-        ))}
-      </ul> */}
+      <div className={styles.img}>
+        <Image
+          src={`https:` + thumbnail.fields.file.url}
+          alt={title}
+          width={320}
+          height={320}
+          // layout="fill"
+          // objectFit="contain"
+        />
+      </div>
     </section>
   );
 };
