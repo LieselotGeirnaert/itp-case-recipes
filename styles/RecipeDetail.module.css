@@ -90,6 +90,7 @@
 }
 
 .description p {
+  line-height: 1.6rem;
   padding: 0.2rem 0;
 }
 
@@ -111,4 +112,36 @@
   position: absolute;
   bottom: 2rem;
   width: 2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .recipe {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .recipe {
+    grid-template-columns: 1fr;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 100%;
+  }
+
+  .title {
+    grid-column: 1 / span 1;
+  }
+
+  .ingredients {
+    grid-column: 1 / span 1;
+  }
+
+  .supplies {
+    grid-column: 1 / span 1;
+    grid-row: 5 / span 1;
+  }
+
+  .description {
+    grid-row: 6 / span 1;
+  }
 }

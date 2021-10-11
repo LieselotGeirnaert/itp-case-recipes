@@ -66,6 +66,12 @@
   width: 320px;
 }
 
+@media only screen and (max-width: 1024px) {
+  .recipe {
+    max-width: 100%;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .recipe {
     grid-template-columns: 1fr 1fr;
